@@ -1,3 +1,8 @@
+.player-position{
+    position: absolute;
+    right: 0;
+}
+
 .field {
     width: 100vw;
     height: 100vh;
@@ -48,4 +53,9 @@
         transform: scale(1.65) ;
         transform: translateX(300px) translateY(-70px) rotate(15deg);
     }
+}
+
+.played-card{
+    right: 35px; //see html top card style
+    transform: translateX(300px) translateY(-70px) rotate(15deg); //end position 100%
 }
