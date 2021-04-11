@@ -17,3 +17,36 @@
         width: 150px;
     }
 }
+
+.top-card{
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+    &:hover {
+        transform: scale(1.1) translateY(-20px);
+        
+    }
+}
+
+.pick-card {
+    transition: all 125ms ease-in-out;
+    //transform: scale(1.6) !important;
+    animation: pick-card-animation 1s ease-in-out;
+    transform: translateX(300px) translateY(-70px) rotate(15deg); //end position 100%
+}
+
+@keyframes pick-card-animation {
+    0% {
+        transform: scale(1) ;
+    }
+
+    30%{
+        transform: scale(1.7) ;
+    }
+    60%{
+        transform: scale(1.7) ;
+    }
+    100%{
+        transform: scale(1.3) ;
+        transform: translateX(300px) translateY(-70px) rotate(15deg);
+    }
+}
