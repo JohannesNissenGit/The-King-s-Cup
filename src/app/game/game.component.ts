@@ -21,32 +21,40 @@ export class GameComponent implements OnInit {
     console.log(this.game);
   }
 
+  //create new game
   newGame() {
     this.game = new Game();
   }
 
+  //pick top card
   takeCard() {
     if (!this.pickCardAnimation) {
       this.currentCard = this.game.stack.pop()!;
       console.log(this.currentCard);
-      this.pickCardAnimation = true;
-     
+      this.pickCardAnimation = true;  //animate top card
+
+      this.game.currentPlayer ++;
+      this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;   //cycle current player after each drawn card
+      
       setTimeout(() => {
-        this.game.playedCards.push(this.currentCard);
+        this.game.playedCards.push(this.currentCard); //push played card into playedCards array
         this.pickCardAnimation = false;
       }, 1000);
     }
   }
 
+  //add player
     openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
     dialogRef.afterClosed().subscribe((name:string) => {
-      this.game.players.push(name)
-      console.log('Player ' + name + ' added.');
+      if(name && name.length>0) {
+      this.game.players.push(name) 
+      console.log('Player ' + name + ' added.');}
     });
   }
 
+  //clear players
   deleteAllPlayers() {
     this.game.players = [];
   }

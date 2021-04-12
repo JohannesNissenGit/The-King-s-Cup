@@ -1,7 +1,7 @@
 <mat-card>
 
 <mat-card-title>
-    {{ title }}
+    {{ card ? title : 'Welcome! Please add players and pick the first card.' }} <!--short version of if card exists, display title, if not display text in ''-->
 </mat-card-title>
 
 <mat-card-content>
