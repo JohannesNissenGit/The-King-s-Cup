@@ -17,7 +17,7 @@ export class DialogAddPlayerComponent implements OnInit {
     
   }
 
-
+ 
 }
 
 

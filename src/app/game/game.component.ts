@@ -46,4 +46,10 @@ export class GameComponent implements OnInit {
       console.log('Player ' + name + ' added.');
     });
   }
+
+  deleteAllPlayers() {
+    this.game.players = [];
+  }
+
+ 
 }
