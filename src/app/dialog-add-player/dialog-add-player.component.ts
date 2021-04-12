@@ -17,6 +17,9 @@ export class DialogAddPlayerComponent implements OnInit {
     
   }
 
+  deleteAllPlayers() {
+    
+  }
  
 }
 
