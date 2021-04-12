@@ -13,7 +13,7 @@
     <img (click)="takeCard()" *ngIf="pickCardAnimation" class="pick-card" style="right: 35px" src="./assets/img/cards/{{ currentCard }}.png" alt="">
 </div>
 
-<button class="button-add" mat-fab color="primary" aria-label="add a player">
+<button (click)="openDialog()" class="button-add" mat-fab color="primary" aria-label="add a player">
     <mat-icon>add</mat-icon>
   </button>
 
