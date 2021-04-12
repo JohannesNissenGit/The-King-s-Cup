@@ -17,7 +17,7 @@ class="player-position" ></app-player>
 </div>
 
 <!--rule field-->
-<app-game-info class="pin-bottom"></app-game-info>
+<app-game-info class="pin-bottom" [card]="currentCard"></app-game-info>
 
 <!-- + button-->
 <button (click)="openDialog()" class="button-add" mat-fab color="primary" aria-label="add a player">
