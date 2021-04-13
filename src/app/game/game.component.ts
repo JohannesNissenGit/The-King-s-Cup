@@ -58,10 +58,10 @@ export class GameComponent implements OnInit {
     });
   }
 
-  //clear players
+  /*//clear players
   deleteAllPlayers() {
     this.game.players = [];
-  }
+  }*/
 
  
 }

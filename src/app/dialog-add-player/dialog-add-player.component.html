@@ -9,5 +9,5 @@
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
   <button mat-button [disabled]="name.length == 0" [mat-dialog-close]="name" cdkFocusInitial>Ok</button>
-  <button mat-button (click)="deleteAllPlayers()">Clear Players</button>
+  <!--<button mat-button [disabled]="game.players.length == 0" (click)="deleteAllPlayers()">Clear Players</button>-->
 </div>

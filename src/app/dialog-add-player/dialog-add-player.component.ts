@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-dialog-add-player',
@@ -7,6 +8,9 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./dialog-add-player.component.scss']
 })
 export class DialogAddPlayerComponent implements OnInit {
+
+ 
+  @Input() game;
 
   name: string ='';
   constructor(public dialog: MatDialog, public dialogRef: MatDialogRef<DialogAddPlayerComponent>) { }
@@ -19,7 +23,8 @@ export class DialogAddPlayerComponent implements OnInit {
   }
 
   deleteAllPlayers() {
-    
+    console.log(this.game);
+    this.game.players = [];
   }
  
 }
