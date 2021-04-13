@@ -35,6 +35,10 @@ export class GameComponent implements OnInit {
 
       this.game.currentPlayer ++;
       this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;   //cycle current player after each drawn card
+
+      setTimeout(() => {
+        document.getElementById('topcard')?.classList.add('d-none');
+      }, 1000);
       
       setTimeout(() => {
         this.game.playedCards.push(this.currentCard); //push played card into playedCards array
